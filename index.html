@@ -79,11 +79,11 @@
 				</section>
 				
 				<section>
-					<h2>A11y is <em>simply</em> a matter of good HTML and solving interactivity with JavaScript</h2>
+					<h2>"A11y is <em>simply</em> a matter of good HTML and solving interactivity with JavaScript"</h2>
 				</section>
 
 				<section>
-					<h2>It's not about CSS</h2>
+					<h2>"It's not about CSS"</h2>
 				</section>
 
 				<section>
@@ -101,7 +101,99 @@
 					<h2>CSS is part of accessibility</h2>
 				</section>
 				
-				
+				<section>
+					<h2>7 times CSS broke Accessibility</h2>
+				</section>
+
+				<section>
+					<h2>1<br>
+					Outlines</h2>
+				</section>
+
+				<section>
+					<h2>Don't delete the outline</h2>
+				</section>
+
+				<section>
+					<h2>It's the keyboard user's cursor</h2>
+					<p>Keyboard users... are everywhere</p>
+				</section>
+
+				<section>
+					<div class="empanadas">
+						<img class="empanadas-img" src="img/empanadas1.jpg" alt="">
+						<img class="empanadas-img" src="img/empanadas2.jpg" alt="">
+						<img class="empanadas-img" src="img/empanadas3.jpg" alt="">
+						<img class="empanadas-img" src="img/empanadas4.jpg" alt="">
+					</div>
+				</section>
+
+				<section><img src="img/outline1.gif" alt="Example of google.com/about with keyboard navigation"></section>
+
+				<section class="incomplete">
+					<h2>focus-within and so on</h2>
+				</section>
+
+				<section>
+					<div class="snowman">
+						<img src="img/snowman.png" alt="">
+						<div class="snowman-cover">
+							<h2 class="snowman-title fragment">It doesn't have to be a snowman</h2>
+							<p class="snowman-correct fragment">Outline</p>
+						</div>
+					</div>
+				</section>
+
+				<section>
+					<img src="img/sara.gif" alt="Example of Sara Soueidan's website with yellow outlines">
+				</section>
+
+				<section>
+					<h2>Don't delete the outline</h2>
+					<p class="fragment">... Unless you replace it.</p>
+				</section>
+
+
+
+
+
+				<section>
+					<h2>2<br>
+					Hiding Content</h2>
+				</section>
+
+				<section>
+					<h2>3<br>
+					Non-HTML Content</h2>
+				</section>
+
+				<section>
+					<h2>4<br>
+					Order</h2>
+				</section>
+
+				<section>
+					<h2>5<br>
+					<span class="font-mono">display: contents;</span></h2>
+				</section>
+
+				<section>
+					<h2>6<br>
+					Motion</h2>
+				</section>
+
+				<section>
+					<h2>7<br>
+					Media Queries</h2>
+				</section>
+
+				<section>
+					<h2>Off-by-one error<br>
+						TBD
+					</h2>
+				</section>
+
+
 				<!-- Example code :) -->
 				<section class="left">
 					<h2>Creating a checkbox</h2>
@@ -188,7 +280,23 @@
 					{ src: 'plugin/notes/notes.js', async: true },
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
-			});
+			});			
+
+			// Carousel animation
+			var images = document.querySelectorAll(".empanadas-img");
+			var current = 0;
+
+			// These animations won't be available in IE11
+			if(!!navigator.userAgent.match(/Trident\/7\./) == false) {
+			setInterval(function() {
+				for (var i = 0; i < images.length; i++) {
+					images[i].style.opacity = 0;
+				}
+				current = (current != images.length - 1) ? current + 1 : 0;
+				images[current].style.opacity = 1;
+				}, 4500);
+			}
+
 		</script>
 
 		<script>

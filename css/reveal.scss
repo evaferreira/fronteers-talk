@@ -1627,3 +1627,56 @@ sup.sup-height{
 .large-img.large-img{
 	width: 350px;
 }
+
+.empanadas{
+	height: 400px;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.empanadas-img{
+	width: 700px;
+	height: 400px;
+	position: absolute;
+	display: block;
+	transition: opacity 0.7s ease-in-out;
+}
+.empanadas-img:not(:first-child){
+	opacity: 0;
+}
+
+.snowman{
+	position: relative;
+	max-width: 565px;
+	text-align: left;
+}
+.snowman.snowman{
+	margin-left: auto;
+	margin-right: auto;
+}
+.snowman-cover{
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+}
+.snowman-title.snowman-title{
+	text-transform: uppercase;
+	color: white;
+	text-shadow: 1px 1px 1px black, -1px -1px 1px black,
+				 -1px 0 1px black, 0 1px 1px black;
+	line-height: 1.05;
+}
+.snowman-correct.snowman-correct{
+	position: absolute;
+	text-transform: uppercase;
+	color: white;
+	text-shadow: 1px 1px 6px black, -2px -1px 5px black, -1px 0 2px black, 2px 1px 10px black;
+	bottom: -2px;
+	right: 50px;
+	font-size: 1.6em;
+	font-weight: bold;
+	filter: drop-shadow(4px 4px 12px black);
+
+	transform: scale(1.08) rotate(-2deg);
+}
