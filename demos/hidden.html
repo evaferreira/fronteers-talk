@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .all{
+			visibility: hidden;
+		}
+		.visually-hidden { 
+			display: block;
+			height: 1px;
+			width: 1px;
+			overflow: hidden;
+			clip: rect(1px 1px 1px 1px);
+			clip: rect(1px, 1px, 1px, 1px);
+			clip-path: inset(1px);
+			white-space: nowrap;
+			position: absolute;
+		}
+    </style>
+</head>
+<body>
+	<a href="#" class="all">Hidden from all users</a> /
+	<a href="#" aria-hidden="true">Hidden</a> /
+	<a href="#" class="visually-hidden">Visually hidden element</a>
+</body>
+</html>

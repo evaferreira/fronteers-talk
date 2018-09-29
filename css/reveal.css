@@ -1417,3 +1417,6 @@ sup.sup-height {
   font-weight: bold;
   filter: drop-shadow(4px 4px 12px black);
   transform: scale(1.08) rotate(-2deg); }
+
+.bold.bold {
+  font-weight: bold; }

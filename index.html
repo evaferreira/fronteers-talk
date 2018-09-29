@@ -58,7 +58,7 @@
 					<!-- Not bad intentions at all, just mistakes -->
 				</section>
 				
-				<section class="left incomplete">
+				<section class="left">
 					<h2>Myths</h2>
 					<ul>
 						<li class="fragment">"A11y is just blind people"</li>
@@ -67,7 +67,7 @@
 					</ul>
 				</section>
 				
-				<section class="left incomplete">
+				<section class="left">
 					<h2>Myths</h2>
 					<ul>
 						<li class="fragment">"A11y destroys performance"</li>
@@ -117,11 +117,6 @@
 				</section>
 
 				<section>
-					<h2>Don't delete the outline</h2>
-					<!-- Refer to Laura's talk if she happens to mention that the day before -->
-				</section>
-
-				<section>
 					<h2>It's the keyboard user's cursor</h2>
 					<p>Keyboard users... are everywhere</p>
 					<!--
@@ -139,14 +134,15 @@
 				</section>
 
 				<section>
+					<h2>Don't delete the outline</h2>
+					<!-- Refer to Laura's talk if she happens to mention that the day before -->
+				</section>
+
+				<section>
 					<img src="img/outline1.gif" alt="Example of google.com/about with keyboard navigation">
 					<!--
 						Briefly mention that native outline sometimes it's not cool enough
 					-->
-				</section>
-
-				<section class="incomplete">
-					<h2>focus-within and so on</h2>
 				</section>
 
 				<section>
@@ -169,25 +165,29 @@
 				</section>
 
 				<section>
-					<h2>Visible focus</h2>
+					<img src="img/outline-background.gif" alt="GIF animation showing a link getting focus with a pink background">
 					<pre><code data-trim class="css">
-
+a:focus{
+	outline: none;
+	background-color: pink;
+}
 					</pre></code>
+					<!-- Make it consistent across the whole site -->
 				</section>
 
-				<section>
-					<a href="demos/focus.html" target="_blank">Demo Focus</a>
-				</section>
-
-				<section class="incomplete left">
+				<section class="left">
 					<h2>Outlines are cool, anyway!</h2>
 					<ul>
 						<li>They don't take any space</li>
-						<li>It's like a shadow</li>
+						<!-- It's like a shadow -->
 						<li>You can make them look awesome!</li>
-						<li>no borderradius</li>
-						<li>focus-within + una kravetz + submenu</li>
+						<li>It's known to the user</li>
+						<li class="incomplete">focus-within + una kravetz + submenu</li>
 					</ul>
+				</section>
+
+				<section class="incomplete">
+					<h2>focus-within and so on</h2>
 				</section>
 
 
@@ -197,19 +197,70 @@
 				<section class="incomplete">
 					<h2>2<br>
 					Hiding Content</h2>
-					<p class="fragment">From whom?</p>
+				</section>
+
+				<section class="left">
+					<h2>Hidden from whom?</h2>
+					<ul>
+						<li><span class="bold">All users</span>: Completely hidden</li>
+						<li><span class="bold">SR users</span>: Semantically hidden</li>
+						<li><span class="bold">Sighted users</span>: Visually hidden</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Completely hidden</h2>
+					<pre><code data-trim class="css">
+.element{
+	display: none;
+}
+					</pre></code>
+
+					<pre><code data-trim class="css">
+.element{
+	visibility: hidden;
+}
+					</pre></code>
+					<!-- Preserves the space -->
+
+					<pre><code data-trim class="html">
+&lt;div hidden>Element&lt;/div>
+					</pre></code>
+				</section>
+
+				<section>
+					<h2>Semantically hidden</h2>
+					<pre><code data-trim class="html">
+&lt;div aria-hidden="true">Element&lt;/div>
+					</pre></code>
+					<!-- Don't use on focusable elements -->
+				</section>
+
+				<section>
+					<h2>Visually hidden</h2>
+					<pre><code data-trim class="css">
+.visually-hidden { 
+	display: block;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px, 1px, 1px, 1px);
+	clip-path: inset(1px);
+	white-space: nowrap;
+	position: absolute;
+}
+					</pre></code>
+					<!--
+						Yes, that is a lot of code
+						Allows separation of concerns, works in every browser and any element
+						And you can just copy and paste it
+					-->
 				</section>
 
 				<section class="incomplete">
-					<h2>Hidden from all users</h2>
-				</section>
-
-				<section class="incomplete">
-					<h2>Hidden from screen-reader users</h2>
-				</section>
-
-				<section class="incomplete">
-					<h2>Hidden from sighted users</h2>
+					<h2>Skip links, un-do Visually hidden</h2>
+					Use main tag with ID
 				</section>
 
 				<section>
