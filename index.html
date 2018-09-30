@@ -194,7 +194,7 @@ a:focus{
 
 
 
-				<section class="incomplete">
+				<section>
 					<h2>2<br>
 					Hiding Content</h2>
 				</section>
@@ -269,17 +269,74 @@ a:focus{
 				</section>
 
 				<section>
+					<h2>CSS Generated content</h2>
+					<pre><code data-trim class="css">
+.element::before{
+	content: "Hola mundo";
+}
+.element::after{
+	content: "Chau mundo";
+}
+					</pre></code>
+				</section>
+
+				<section>
+					<h2>Do screen readers... read it?</h2>
+				</section>
+
+				<section>
+					<h2>About ~80% do.</h2>
+					<p class="fragment">IE11 doesn't</p>
+				</section>
+
+				<!--
+					IE11 with NVDA, Narrator and Jaws
+				-->
+
+				<section class="left incomplete">
+					<h2>CSS Generated content</h2>
+					<ul>
+						<li>Separation of concerns</li>
+						<li>Use aria-hidden if it's decorative</li>
+					</ul>
+				</section>
+
+				<section>
 					<h2>4<br>
 					Order</h2>
 				</section>
 
-				<section class="incomplete">
-					<h2>Order property</h2>
+				<section>
+					<h2><span class="font-mono">Order</span> <span class="light">&</span> <span class="font-mono">flex-direction</span> <span class="light">properties</span></h2>
 				</section>
 
-				<section class="incomplete">
-					<h2>Flex-Direction</h2>
+				<section>
+					<img src="img/order1.gif" alt="GIF shows order of properties with default values, focus goes one after the other">
 				</section>
+
+				<section>
+					<h2>Add <span class="font-mono">flex-direction</span></h2>
+					<pre><code data-trim class="css">
+.element{
+	flex-direction: column-reverse;
+}
+					</pre></code>
+				</section>
+
+				<section>
+					<img src="img/order2.gif" alt="GIF shows order of properties reversed, focus of items now looks confusing">
+					<!-- Same happens with order property -->
+				</section>
+
+				<section>
+					<h2>Visual presentation 
+						<img src="img/disconnect.svg" alt="Disconnect icon" class="no-border">
+					 DOM order</h2>
+				</section>
+
+
+
+
 
 				<section>
 					<h2>5<br>
@@ -333,52 +390,14 @@ a:focus{
 					-->
 				</section>
 
-				<!-- Example code :) -->
-				<section class="left">
-					<h2>Creating a checkbox</h2>
-					<ol>
-						<li class="fragment">Select tag (<span class="font-mono">span</span>)</li>
-						<li class="fragment">Style</li>
-					</ol>
-				</section>
+				<!--
+					Final words
 
-				<section>
-					<h2>Let's begin</h2>
-					<pre><code data-trim class="html">
-&lt;span class="check">&lt;/span>
-					</pre></code>
-				</section>
+					Separation of concers has to be a thing
+					Content should make sense without styles, but don't break it with CSS
+					Once again, Uncle Ben was right. No more worrying about border-radius, but more responsabilities
+				-->
 
-				<section class="iframe">
-					<iframe sandbox="allow-scripts" src="demos/checkbox1.html"></iframe>
-				</section>
-
-				<section>
-					<a href="demos/checkbox3.html" target="_blank">Demo Tab</a>
-				</section>
-
-				<section class="white" data-background-color="#ff7b00">
-					<h2>Testing</h2>
-				</section>
-				
-				
-				
-				
-
-				<section class="incomplete">
-					<h2>Fun fact</h2>
-					<p class="fragment">How do we sell this?</p>
-				</section>
-
-				<section class="left incomplete">
-					<h2>"Selling" accessibility</h2>
-					<ul>
-						<li class="fragment">Law</li>
-						<li class="fragment">Ethics</li>
-						<li class="fragment">SEO</li>
-						<li class="fragment">... Numbers</li>
-					</ul>
-				</section>
 
 				<section class="incomplete">
 					<h2>15% of World Population</h2>
