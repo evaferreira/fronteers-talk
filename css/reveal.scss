@@ -1688,3 +1688,19 @@ img.no-border.no-border{
 	box-shadow: none;
 	margin-bottom: 0;
 }
+
+.reduced{
+	position: relative;
+	width: 900px;
+	height: 439px;
+}
+.reduced.reduced{
+	margin-left: auto;
+	margin-right: auto;
+}
+.reduced-img{
+	top: 0;
+	left: 0;
+	width: 100%;
+	position: absolute;
+}
