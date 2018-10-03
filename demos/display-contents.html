@@ -9,9 +9,26 @@
         ul{
             display: contents;
         }
+        .left{
+            display: block;
+            background-color: white;
+            padding: 20px 32px;
+            max-width: 1000px;
+            width: 100%;
+            height: 50vh;
+            max-height: 750px;
+            font-size: 2em;
+            background: transparent;
+            border: none;
+            order: 2;
+            margin: 0 auto;
+            font-family: monospace;
+        }
     </style>
 </head>
 <body>
+    <h1>display: contents;</h1>
+
     <ul>
         <li>Item 1</li>
         <li>Item 2</li>
@@ -20,5 +37,11 @@
         <li>Item 5</li>
         <li>Item 6</li>
     </ul>
+
+    <style class="left" spellcheck="false" tabindex="0" contenteditable>
+ul{
+    display: contents;
+}
+    </style>
 </body>
 </html>

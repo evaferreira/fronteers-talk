@@ -14,9 +14,26 @@
             background-color: red;
         }
     }
+    .left{
+        background-color: white;
+        padding: 20px 32px;
+    }
     </style>
+	<link href="demo.css" rel="stylesheet">
 </head>
 <body>
     <h1>Reduced motion</h1>
+	<section class="live demo slide example">
+			<textarea class="shape-snippet left col check2" spellcheck="false" tabindex="0">
+body {
+    background-color: green;
+}
+@media (prefers-reduced-motion: reduce) {
+    body {
+        background-color: red;
+    }
+}
+			</textarea>
+	</section>
 </body>
 </html>

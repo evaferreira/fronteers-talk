@@ -268,6 +268,10 @@ a:focus{
 					Use main tag with ID
 				</section>
 
+
+
+
+
 				<section>
 					<h2>3<br>
 					Non-HTML Content</h2>
@@ -357,17 +361,26 @@ a:focus{
 					<span class="font-mono">display: contents;</span></h2>
 				</section>
 
-				<section class="incomplete">
+				<section>
 					<h2>Not a CSS Reset</h2>
-					<!-- Firefox Developer tools
-						Accidentaly gets rid of semantics
+					<p class="fragment">Accidentally gets rid of semantics</p>
+					<!-- Firefox Developer tools / Chrome
+						Accidentally gets rid of semantics
 						works in firefox (bug fixed)
 					 -->
 				</section>
 
-				<section class="incomplete">
+				<section>
 					<a href="demos/display-contents.html" target="_blank">Demo</a>
 				</section>
+
+				<section class="incomplete">
+					<h2>Recap de display contents</h2>
+					<p class="incomplete">This is a bug . Caniuse</p>
+					<a href="http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html" target="_blank" rel="noopener" class="fragment">Adrian Roselli on Display Contents</a>
+					<img src="img/contents.png" alt="Caniuse.com screenshot that shows the bug in multiple browsers with a fix on the lastest Firefox">
+				</section>
+
 
 
 
@@ -403,9 +416,9 @@ a:focus{
 					<h2>Why is this useful?</h2>
 					<ul>
 						<li class="fragment">Vestibular disorders</li>
-						<li class="fragment incomplete">ADHT ()</li>
-						<li class="fragment incomplete">Low battery (+ Windows mode)</li>
-						<li class="fragment incomplete">Low-end technology</li>
+						<li class="fragment">Attention deficit hyperactivity disorder (ADHD)</li>
+						<li class="fragment">Low battery</li>
+						<li class="fragment">Low-end technology</li>
 						<li class="fragment">Anxiety</li>
 					</ul>
 				</section>
@@ -419,31 +432,69 @@ a:focus{
 					<!--
 						High-contrast, light, invert and so on
 						ambient light, sensitivity issues, airplane
-						Control goes back to the developer with the ms media query
-						Users choice, no loger matters how you site looks like. forget about design, it's about UX
-						Add Greg's post: http://www.gwhitworth.com/blog/2017/04/how-to-use-ms-high-contrast
 					-->
 				</section>
 
 				<section class="incomplete">
-					<h2>-ms-high-contrast</h2>
+					<h2>Light level</h2>
 					<pre><code data-trim class="css">
-	@media screen and (-ms-high-contrast: active) {
-		/* All high contrast styling rules */
-	}
-	@media screen and (-ms-high-contrast: black-on-white) {
-		/* Specific */
-		.el { background-image: url(image2.png); }
-	}
-	@media screen and (-ms-high-contrast: white-on-black) {
-		/* Specific */
-		.el { background-image: url(image3.png); }
-	}
+@media (light-level: normal) {
+  p {
+    color: #333;
+  }
+}
+
+@media (light-level: dim) {
+  p {
+    background: #222;
+    color: #ccc;
+  }
+}
+
+@media (light-level: washed) {
+  p {
+    background: white;
+    color: black;
+    font-size: 2em;
+  }
+}
+					</pre></code>
+				</section>
+
+				<section class="incomplete">
+					<h2>-ms-high-contrast General</h2>
+					<pre><code data-trim class="css">
+@media screen and (-ms-high-contrast: active) {
+	/* All high contrast styling rules */
+}
+					</pre></code>
+				</section>
+
+				<section class="incomplete">
+					<h2>-ms-high-contrast Specific</h2>
+					<pre><code data-trim class="css">
+@media screen and (-ms-high-contrast: black-on-white) {
+	/* Specific */
+	.el { background-image: url(image2.png); }
+}
+@media screen and (-ms-high-contrast: white-on-black) {
+	/* Specific */
+	.el { background-image: url(image3.png); }
+}
 					</pre></code>
 				</section>
 
 				<section class="incomplete">
 					<a href="demos/contrast1.html" target="_blank">Demo</a>
+				</section>
+
+				<section>
+					<h2>From OS to the Browser</h2>
+					<a href="http://www.gwhitworth.com/blog/2017/04/how-to-use-ms-high-contrast" rel="noopener" target="_blank" class="fragment">How to use -ms-high-contrast - Greg Whitworth</a>
+					<!--
+						Control goes back to the developer with the ms media query
+						Users choice, no loger matters how you site looks like. forget about design, it's about UX
+					-->
 				</section>
 
 
@@ -473,13 +524,18 @@ a:focus{
 					</h2>
 				</section>
 
-				<section class="incomplete">
+				<section class="incomplete left">
 					<h2>Impact of lack of proper Internationalization</h2>
 					<!--
 						Cognitive dishabilities
 						Learning as a non-native speaker
 						Add captions, add proper lang attr at HTML, use i, etc.
 					-->
+					<ul>
+						<li class="fragment">asdf</li>
+						<li class="fragment">asdf</li>
+						<li class="fragment">asdf</li>
+					</ul>
 				</section>
 
 
