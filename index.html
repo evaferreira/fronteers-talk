@@ -175,7 +175,7 @@ a:focus{
 	outline: none;
 	background-color: pink;
 }
-					</pre></code>
+					</code></pre>
 					<!-- Make it consistent across the whole site -->
 				</section>
 
@@ -218,25 +218,25 @@ a:focus{
 .element{
 	display: none;
 }
-					</pre></code>
+					</code></pre>
 
 					<pre><code data-trim class="css">
 .element{
 	visibility: hidden;
 }
-					</pre></code>
+					</code></pre>
 					<!-- Preserves the space -->
 
 					<pre class="fragment"><code data-trim class="html">
 &lt;div hidden>Element&lt;/div>
-					</pre></code>
+					</code></pre>
 				</section>
 
 				<section>
 					<h2>Semantically hidden</h2>
 					<pre><code data-trim class="html">
 &lt;div aria-hidden="true">Element hidden from Screen Readers&lt;/div>
-					</pre></code>
+					</code></pre>
 					<!-- Don't use on focusable elements -->
 				</section>
 
@@ -254,7 +254,7 @@ a:focus{
 	white-space: nowrap;
 	position: absolute;
 }
-					</pre></code>
+					</code></pre>
 					<!--
 						Yes, that is a lot of code
 						Allows separation of concerns, works in every browser and any kind of element
@@ -283,13 +283,13 @@ a:focus{
 .element::before{
 	content: "Hola mundo";
 }
-					</pre></code>
+					</code></pre>
 
 					<pre><code data-trim class="css">
 .element::after{
 	content: "Chau mundo";
 }
-					</pre></code>
+					</code></pre>
 				</section>
 
 				<section>
@@ -337,7 +337,7 @@ a:focus{
 .element{
 	flex-direction: column-reverse;
 }
-					</pre></code>
+					</code></pre>
 				</section>
 
 				<section class="incomplete">
@@ -396,7 +396,7 @@ a:focus{
 @media (prefers-reduced-motion: reduce) {
 	/* Toggle off animations */
 }
-					</pre></code>
+					</code></pre>
 				</section>
 
 				<section>
@@ -435,19 +435,22 @@ a:focus{
 					-->
 				</section>
 
-				<section class="incomplete">
+				<section class="left">
+					<h2>Light Level</h2>
+					<ul>
+						<li class="fragment"><span class="bold">Normal</span>: Natural / artificial light</li>
+						<li class="fragment"><span class="bold">Dim</span>: At night / low light</li>
+						<li class="fragment"><span class="bold">Washed</span>: Sunlight, the vampire slayer</li>
+					</ul>
+				</section>
+
+				<section>
 					<h2>Light level</h2>
 					<pre><code data-trim class="css">
-@media (light-level: normal) {
-  p {
-    color: #333;
-  }
-}
-
 @media (light-level: dim) {
   p {
     background: #222;
-    color: #ccc;
+    color: white;
   }
 }
 
@@ -458,45 +461,139 @@ a:focus{
     font-size: 2em;
   }
 }
-					</pre></code>
+					</code></pre>
 				</section>
 
-				<section class="incomplete">
-					<h2>-ms-high-contrast General</h2>
+				<section>
+					<img src="img/light-level.png" alt="Example of light level, three paragraphs with different background colors and text color, it get's darker every time and in the last one text color is white">
+				</section>
+
+				<section>
+					<h2>Nope, that doesn't work anywhere <em>(yet)</em></h2>
+				</section>
+
+
+
+
+				<section class="left">
+					<h2>Inverted colors</h2>
+					<ul>
+						<li class="fragment">None</li>
+						<li class="fragment">Inverted</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Inverted colors</h2>
 					<pre><code data-trim class="css">
-@media screen and (-ms-high-contrast: active) {
+@media (inverted-colors: inverted) {
+  img{
+	  filter: invert(100%);
+  }
+  input{
+	  border: 2px solid skyblue;
+  }
+}
+					</code></pre>
+				</section>
+
+				<section>
+					<h2>Currently works in Safari browser</h2>
+				</section>
+
+
+
+
+
+				<section class="left">
+					<h2>High Contrast mode (Windows)</h2>
+					<ul>
+						<li class="fragment">On/off</li>
+						<li class="fragment">Black on white</li>
+						<li class="fragment">White on black</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>-ms-high-contrast</h2>
+					<pre><code data-trim class="css">
+@media (-ms-high-contrast: active) {
 	/* All high contrast styling rules */
 }
-					</pre></code>
+					</code></pre>
 				</section>
 
-				<section class="incomplete">
-					<h2>-ms-high-contrast Specific</h2>
+				<section>
+					<h2>-ms-high-contrast</h2>
 					<pre><code data-trim class="css">
-@media screen and (-ms-high-contrast: black-on-white) {
+@media (-ms-high-contrast: black-on-white) {
 	/* Specific */
 	.el { background-image: url(image2.png); }
 }
-@media screen and (-ms-high-contrast: white-on-black) {
+
+@media (-ms-high-contrast: white-on-black) {
 	/* Specific */
 	.el { background-image: url(image3.png); }
 }
-					</pre></code>
+					</code></pre>
 				</section>
 
-				<section class="incomplete">
+				<section>
 					<a href="demos/contrast1.html" target="_blank">Demo</a>
 				</section>
 
 				<section>
-					<h2>From OS to the Browser</h2>
-					<a href="http://www.gwhitworth.com/blog/2017/04/how-to-use-ms-high-contrast" rel="noopener" target="_blank" class="fragment">How to use -ms-high-contrast - Greg Whitworth</a>
-					<!--
-						Control goes back to the developer with the ms media query
-						Users choice, no loger matters how you site looks like. forget about design, it's about UX
-					-->
+					<h2>Works in Microsoft Edge <span aria-label="shrug icon">¯\_(ツ)_/¯</span></h2>
 				</section>
 
+				<section class="left">
+					<h2>Inverted colors Vs. High Contrast mode</h2>
+					<ul>
+						<li class="fragment">Inverted colors doesn't fix a bad contrast</li>
+						<li class="fragment">High Contrast mode doesn't invert images</li>
+						<li class="fragment">High Contrast mode doesn't... invert colors.</li>
+					</ul>
+				</section>
+
+				<section>
+					<pre class="fragment"><code data-trim class="css">
+@media (-ms-high-contrast: active) {
+	body{
+		/* This will be pink */
+		background-color: pink;
+	}
+}
+					</code></pre>					
+					
+					<pre class="fragment"><code data-trim class="css">
+@media (inverted-colors: inverted) {
+	body{
+		/* This will NOT be pink */
+		background-color: pink;
+	}
+}
+					</code></pre>
+
+				</section>
+				
+				<section>
+					<h2>Inverted colors Vs. High Contrast mode</h2>
+					<img src="img/adrian.png" alt="Screenshot from Adrian Roselli's post">
+					<a href="http://adrianroselli.com/2017/11/os-high-contrast-versus-inverted-colors.html">Adrian Roselli on High Contrast</a>
+				</section>
+
+				<section>
+					<h2>From OS to the Browser</h2>
+					<p class="fragment">User's choice with developer control</p>
+				</section>
+
+				<section>
+					<h2>Not only about size anymore</h2>
+				</section>
+
+				<section>
+					<h2>...</h2>
+				</section>
 
 
 
@@ -505,7 +602,7 @@ a:focus{
 					<h2>Two most complicated things in computer science</h2>
 				</section>
 
-				<section>
+				<section class="left">
 					<h2>Two most complicated things</h2>
 					<ul>
 						<li class="fragment">Naming things</li>
@@ -551,15 +648,15 @@ a:focus{
 					<ul>
 						<li class="fragment">Separation of concerns</li>
 						<!-- In the era of JSX... -->
-						<li class="fragment">"Move fast, break things" - NOT on my watch.</li>
 						<li class="fragment">Content is the queen.</li>
+						<li class="fragment">"Move fast, break things" - NOT on my watch.</li>
 						<!-- Content should make sense without styles, but don't break it with CSS -->
 						<li class="fragment">Uncle Ben was right.</li>
 					</ul>
 				</section>
 				
 				<section class="white" data-background-color="#ff7b00">
-					<h2 class="incomplete">"With great power, comes great responsability"</h2>
+					<h2>"With great power comes great responsability"</h2>
 					<!-- No more worrying about border-radius or fake gradients, but more responsabilities -->
 				</section>
 
@@ -568,29 +665,26 @@ a:focus{
 				
 				<section class="white" data-background-color="#ff7b00">
 					<h2>Friendly reminder</h2>
-					<p class="fragment incomplete">Order your priorities</p>
-					<!-- Please add Ron -->
 				</section>
 
-				<section class="incomplete">
+				<section>
 					<h2>15% of World Population</h2>
 					<p>World Health Organization</p>
 				</section>
 
-				<section class="incomplete">
-					<img src="img/stats2018.png" alt="Browser stats from statcounter.com Chrome 59%, Safari 13%, UC Browser 7%, Firefox 5%, Opera 3% and IE 3%">
+				<section>
+					<img src="img/stats2018.png" alt="Browser stats from statcounter.com Chrome 60%, Safari 15%, UC Browser 5%, Firefox 5%, Opera 3% and IE 3%">
 				</section>
 
 				<section class="white" data-background-color="#ff7b00">
-					<h2 class="incomplete">Order your priorities</h2>
-					<!-- Please add Ron and re-check quote -->
+					<img src="img/rong.gif" alt="Ron Weasley saying 'She needs to sort out her priorities'" class="fragment">
 				</section>
 
 
 
 
 
-				<section class="left incomplete">
+				<section class="left">
 					<h2>Thanks!</h2>
 					<ul>
 						<li>

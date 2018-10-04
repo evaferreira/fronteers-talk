@@ -29,12 +29,16 @@
 
 	<section class="live demo slide example">
 			<textarea class="shape-snippet left col check2" spellcheck="false" tabindex="0">
-.el{
+@media screen and (-ms-high-contrast: black-on-white) {
+	.el { background-color: pink; }
+}
 
+@media screen and (-ms-high-contrast: white-on-black) {
+	.el { background-color: blue; }
 }
 			</textarea>
 			<div class="flota col focus">
-				<div class="el">Element with media query</div>
+				<div class="el">Element</div>
 			</div>
 	</section>
 
