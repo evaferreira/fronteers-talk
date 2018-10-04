@@ -310,7 +310,7 @@ a:focus{
 					<ul>
 						<li class="fragment">Avoid using them to provide content</li>
 						<li class="fragment">Separation of concerns</li>
-						<li class="fragment">Use aria-hidden if it's decorative</li>
+						<li class="fragment">Use <span class="font-mono">aria-hidden</span> if it's decorative</li>
 					</ul>
 				</section>
 
@@ -332,18 +332,7 @@ a:focus{
 				</section>
 
 				<section>
-					<h2>Add <span class="font-mono">flex-direction</span></h2>
-					<pre><code data-trim class="css">
-.element{
-	flex-direction: column-reverse;
-}
-					</code></pre>
-				</section>
-
-				<section class="incomplete">
-					<!-- Add working demo -->
-					<img src="img/order2.gif" alt="GIF shows order of properties reversed, focus of items now looks confusing">
-					<!-- Same happens with order property -->
+					<a href="demos/order.html" target="_blank">Demo</a>
 				</section>
 
 				<section>
@@ -374,10 +363,17 @@ a:focus{
 					<a href="demos/display-contents.html" target="_blank">Demo</a>
 				</section>
 
-				<section class="incomplete">
-					<h2>Recap de display contents</h2>
-					<p class="incomplete">This is a bug . Caniuse</p>
-					<a href="http://adrianroselli.com/2018/05/display-contents-is-not-a-css-reset.html" target="_blank" rel="noopener" class="fragment">Adrian Roselli on Display Contents</a>
+				<section class="left">
+					<h2>display: contents;</h2>
+					<ul>
+						<li class="fragment">Re-check semantics</li>
+						<li class="fragment">Add <span class="font-mono">roles</span> if you have to</li>
+						<li class="fragment">This is a bug</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>This is a bug</h2>
 					<img src="img/contents.png" alt="Caniuse.com screenshot that shows the bug in multiple browsers with a fix on the lastest Firefox">
 				</section>
 
@@ -469,7 +465,7 @@ a:focus{
 				</section>
 
 				<section>
-					<h2>Nope, that doesn't work anywhere <em>(yet)</em></h2>
+					<h2>This doesn't work anywhere <em>(yet)</em></h2>
 				</section>
 
 
@@ -508,7 +504,7 @@ a:focus{
 				<section class="left">
 					<h2>High Contrast mode (Windows)</h2>
 					<ul>
-						<li class="fragment">On/off</li>
+						<li class="fragment">Active</li>
 						<li class="fragment">Black on white</li>
 						<li class="fragment">White on black</li>
 					</ul>
@@ -648,7 +644,7 @@ a:focus{
 					<ul>
 						<li class="fragment">Separation of concerns</li>
 						<!-- In the era of JSX... -->
-						<li class="fragment">Content is the queen.</li>
+						<li class="fragment">Content is the queen</li>
 						<li class="fragment">"Move fast, break things" - NOT on my watch.</li>
 						<!-- Content should make sense without styles, but don't break it with CSS -->
 						<li class="fragment">Uncle Ben was right.</li>
@@ -677,7 +673,7 @@ a:focus{
 				</section>
 
 				<section class="white" data-background-color="#ff7b00">
-					<img src="img/rong.gif" alt="Ron Weasley saying 'She needs to sort out her priorities'" class="fragment">
+					<img src="img/ron.gif" alt="Ron Weasley saying 'She needs to sort out her priorities'">
 				</section>
 
 

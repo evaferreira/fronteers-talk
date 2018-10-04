@@ -9,10 +9,24 @@
         .menu{
             font-size: 36px;
             display: flex;
-            flex-direction: column-reverse;
         }
         .menu-item_link:focus{
             outline: 5px dashed hotpink;
+        }
+        .left{
+            display: block;
+            background-color: white;
+            padding: 20px 32px;
+            max-width: 1000px;
+            width: 100%;
+            height: 50vh;
+            max-height: 750px;
+            font-size: 2em;
+            background: transparent;
+            border: none;
+            order: 2;
+            margin: 0 auto;
+            font-family: monospace;
         }
     </style>
 </head>
@@ -22,5 +36,12 @@
         <li class="menu-item"><a href="#" class="menu-item_link">Link number 2</a></li>
         <li class="menu-item"><a href="#" class="menu-item_link">Link number 3</a></li>
     </ul>
+
+    <style class="left" spellcheck="false" tabindex="0" contenteditable>
+.menu{
+    display: flex;
+    flex-direction: column;
+}
+    </style>
 </body>
 </html>
